@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Aplikasi Biodata</string>
+    <string-array name="Gender">
+        <item>Pilih Jenis Kelamin</item>
+        <item>Laki-Laki</item>
+        <item>Perempuan</item>
+    </string-array>
+</resources>
