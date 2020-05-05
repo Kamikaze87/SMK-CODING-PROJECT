@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AboutActivity">
+
+    <TextView
+        android:id="@+id/abouttxt"
+        android:layout_alignParentStart="true"
+        android:gravity="center_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="About Me"
+        android:layout_marginTop="10dp" />
+
+    <ImageView
+        android:id="@+id/fotoprofil"
+        android:layout_width="137dp"
+        android:layout_height="144dp"
+        android:layout_below="@id/abouttxt"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/me" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Nama :"
+                android:layout_marginTop="45dp"
+                android:layout_marginLeft="145dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Andriano Wijaya"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="145dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="E-mail"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="145dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="andrianow817@gmail.com"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="145dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="No Telp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="145dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="0895397129107"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="145dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Alamat"
+                android:layout_below="@id/fotoprofil"
+                android:layout_marginTop="20dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Bakalan Krajan, Sukun, Malang. Jawa Timur"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="GitHub"
+                android:layout_below="@id/fotoprofil"
+                android:layout_marginTop="20dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="https://github.com/Kamikaze87"
+                android:layout_marginTop="10dp"/>
+
+            </LinearLayout>
+
+</RelativeLayout>

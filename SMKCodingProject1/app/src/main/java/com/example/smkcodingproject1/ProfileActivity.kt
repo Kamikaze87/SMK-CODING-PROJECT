@@ -16,8 +16,9 @@ class UserProfileActivity : AppCompatActivity() {
         setContentView(R.layout.activity_profile)
         getData()
 
+        edit.setOnClickListener { menujuEditProfil() }
         dial.setOnClickListener { dialNumber(userTelp.text.toString()) }
-        edit.setOnClickListener { ngEditProfile() }
+        about.setOnClickListener { goToAbout() }
     }
 
     private fun getData(){
@@ -38,31 +39,30 @@ class UserProfileActivity : AppCompatActivity() {
         userAlamat.text = alamat
     }
 
-    companion object {
-        val REQUEST_CODE = 100
-    }
+   companion object {
+       val REQUEST_CODE = 100
+   }
 
-    private fun ngEditProfile() {
+    private fun menujuEditProfil() {
         val intent = Intent (this, EditProfileActivity::class.java)
 
-        val namaUser = userName.text.toString()
-        intent.putExtra("name", namaUser)
+        val namaPengguna = userName.text.toString()
+        intent.putExtra("name", namaPengguna)
 
         startActivityForResult(intent, REQUEST_CODE)
     }
 
-    override fun onActivityResult(requestCode : Int, resultCode : Int, data:Intent?){
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         if (requestCode == REQUEST_CODE) {
-            if(resultCode == Activity.RESULT_OK) {
-                val result = data!!.getStringExtra("name")
-            } else  {
-              Toast.makeText (this, "Failed to Edit",Toast.LENGTH_SHORT).show()
+            if (resultCode == Activity.RESULT_OK) {
+                val result = data?.getStringExtra ("name")
+                userName.text = result
+            } else {
+                Toast.makeText (this, "Edit Failed", Toast.LENGTH_SHORT) .show()
             }
-
-
         }
-
     }
+
 
     private fun dialNumber (phoneNumber: String){
             val intent = Intent(Intent.ACTION_DIAL) .apply {
@@ -72,5 +72,12 @@ class UserProfileActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
+
+private fun goToAbout () {
+    val intent = Intent (this, AboutActivity::class.java)
+
+    startActivity(intent)
+}
+
 }
 

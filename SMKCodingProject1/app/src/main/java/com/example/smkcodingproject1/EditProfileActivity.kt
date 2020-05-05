@@ -6,7 +6,6 @@ import kotlinx.android.synthetic.main.activity_edit_profile.*
 import android.content.Intent
 import android.app.Activity
 import android.view.View
-import android.widget.Toast
 
 class EditProfileActivity : AppCompatActivity() {
 
@@ -15,23 +14,22 @@ class EditProfileActivity : AppCompatActivity() {
         setContentView(R.layout.activity_edit_profile)
 
         val intentData = intent.extras
-        val namaUser = intentData?.getString("name")
+        val namaPengguna = intentData?.getString("name")
 
-        editNama.setText(namaUser)
-        save_btn.setOnClickListener {saveData()}
+        editNama.setText(namaPengguna)
+        save_btn.setOnClickListener { saveData() }
     }
 
     private fun saveData () {
-        val nameEdit = editNama.text.toString()
-        if (!nameEdit.isEmpty()) {
-
+        val edit = editNama.text.toString()
+        if(!edit.isEmpty()) {
             val result = Intent()
-            result.putExtra("name", nameEdit)
-            setResult(Activity.RESULT_OK,result)
-        } else {
-            setResult(Activity.RESULT_CANCELED)
-        }
-            finish()
-    }
+            result.putExtra("name", edit)
+            setResult(Activity.RESULT_OK, result)
 
+            } else {
+                setResult(Activity.RESULT_CANCELED)
+        }
+        finish()
+    }
 }

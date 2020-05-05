@@ -22,6 +22,7 @@ class MainActivity : AppCompatActivity() {
         save_btn.setOnClickListener{ goToProfileActivity() }
         save_btn.setOnClickListener{validasiInput()}
         setDatajeniskelamin()
+        abotbtn.setOnClickListener{ goToAboutPage() }
     }
 
 private fun setDatajeniskelamin(){
@@ -55,7 +56,7 @@ private fun setDatajeniskelamin(){
                 almtInput.isEmpty() -> alamat.error = "Kolom alamat harus di isi"
 
             else -> {
-                tampilToast("Navigasi ke halaman profil")
+                tampilToast("Tersimpan")
                 goToProfileActivity()
                 }
             }
@@ -75,4 +76,8 @@ private fun setDatajeniskelamin(){
         intent.putExtras(bundle)
         startActivity(intent)
     }
+    private fun goToAboutPage() {
+        val intent = Intent (this, AboutActivity::class.java)
+        startActivity(intent)
+        }
 }

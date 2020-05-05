@@ -8,7 +8,7 @@
     android:orientation = "vertical">
 
     <TextView
-        android:layout_marginTop= "20dp"
+        android:layout_marginTop= "10dp"
         android:layout_width = "wrap_content"
         android:layout_height = "wrap_content"
         android:layout_gravity = "center_horizontal"
@@ -18,16 +18,20 @@
 
     <EditText
         android:id = "@+id/editNama"
-        android:layout_width = "match_parent"
-        android:layout_height = "wrap_content"
-        android:layout_marginTop = "20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:padding="7dp"
+        android:background="@drawable/corner_edit"
         android:hint="Ubah Nama"/>
 
     <Button
+        android:background="@drawable/corner_btn"
         android:id = "@+id/save_btn"
-        android:layout_marginTop="30dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:padding="7dp"
         android:text="SIMPAN"/>
 
 </LinearLayout>
